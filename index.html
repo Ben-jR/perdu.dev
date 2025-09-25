@@ -3,32 +3,86 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>perdu.dev</title>
+    <title>Statut Teams Absurde Animé</title>
     <style>
         body {
-            background-color: #f5f5f5;
-            color: #333;
-            font-family: "Courier New", Courier, monospace;
-            text-align: center;
-            padding-top: 100px;
+            background: #1e1e2f;
+            color: #f0f0f0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
         }
+
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 20px;
+            animation: floatTitle 3s ease-in-out infinite;
         }
-        p {
-            font-size: 1.5em;
+
+        ul {
+            list-style: none;
+            padding: 0;
         }
-        .hint {
-            margin-top: 40px;
-            font-size: 1em;
-            color: #888;
+
+        li {
+            font-size: 1.3em;
+            margin: 10px 0;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        li:nth-child(1) { animation-delay: 0.5s; }
+        li:nth-child(2) { animation-delay: 1s; }
+        li:nth-child(3) { animation-delay: 1.5s; }
+        li:nth-child(4) { animation-delay: 2s; }
+        li:nth-child(5) { animation-delay: 2.5s; }
+        li:nth-child(6) { animation-delay: 3s; }
+        li:nth-child(7) { animation-delay: 3.5s; }
+        li:nth-child(8) { animation-delay: 4s; }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatTitle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .emoji {
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
         }
     </style>
 </head>
 <body>
-    <h1>Vous êtes perdu ?</h1>
-    <p>Peut-être avez-vous oublié de faire <code>npm install</code> ?</p>
-    <div class="hint">Ou alors vous avez mis un <code>console.log()</code> dans un <em>useEffect</em> sans dépendances ? 😅</div>
+    <h1>Statut Teams : En mode débogage existentiel</h1>
+    <ul>
+        <li><span class="emoji">🛠️</span> Patch de l’humeur avec un hotfix émotionnel</li>
+        <li><span class="emoji">☕</span> Compiler du café (toujours erreur 418)</li>
+        <li><span class="emoji">🧠</span> Refactorisation mentale en async/await</li>
+        <li><span class="emoji">👽</span> Réunion avec des aliens via WebSocket</li>
+        <li><span class="emoji">🐛</span> Bug qui n’existe que dans les rêves</li>
+        <li><span class="emoji">🧙‍♂️</span> git reset --hard sur ma vie</li>
+        <li><span class="emoji">📦</span> Installation de motivation@0.0.1-beta</li>
+        <li><span class="emoji">🕵️‍♂️</span> console.log("Pourquoi ?")</li>
+    </ul>
 </body>
 </html>
